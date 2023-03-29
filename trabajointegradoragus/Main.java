@@ -62,16 +62,20 @@ public class Main {
                     String persona1= pronostico[0];
                     String ganadorpronostico= pronostico[1];
                     String ganadorpartido= partido1.Resultado();
-                    System.out.println(ganadorpartido);
-                    int puntos=0;
-                    if(ganadorpartido.equals(ganadorpronostico)){
-                        
-                       puntos++;    
-                    }else{
-                        System.out.println("El pronostico fallo");
-                    }
-                    System.out.println(persona1+"| Puntos: "+puntos);
-            }
+                     // System.out.println(ganadorpartido);
+                    Object ganadorpronosticoo=ganadorpronostico;
+                    Object ganadorpartidoo= persona1;
+  
+                   int puntos = 0;
+        
+                   if (ganadorpartidoo!=ganadorpronosticoo) 
+                   {
+                    System.out.println("ACERTÓ");
+                    puntos++;
+                   } 
+                   else 
+                   System.out.println("FALLÓ");
+                   
         }catch(Exception e){
             JOptionPane.ShowMessageDialog(null,e);
         }
